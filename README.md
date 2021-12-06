@@ -13,7 +13,7 @@
 </a>
 
 <p align = "center">
-<a href = "https://github.com/Itsunknown-12/Zaid-Robot">
+<a href = "https://github.com/Yukki79/FlorinaRobot">
 <img src = "https://forthebadge.com/images/badges/open-source.svg">
 </p>
 </a>
@@ -36,19 +36,19 @@
 
 
 ## 𝑹𝑬𝑷𝑶 𝑺𝑻𝑨𝑻𝑺
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=Itsunknown-12&repo=TGN-Robot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=Yukki79&repo=FlorinaRobot&theme=dark)
 
 ## 𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑬𝑳𝑭 𝑳𝑶𝑳
-[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Itsunknown-12/TGN-Robot)
+[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yukki79/FlorinaRobot)
 
 
 ## 𝑽𝑬𝑹𝑰𝑨𝑩𝑳𝑬𝑺
 [ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ](https://github.com/Itsunknown-12/Zaid-Robot/blob/master/Configuration)
 
 ## 𝑺𝑼𝑷𝑷𝑶𝑹𝑻
-[![𝐅𝐋𝐎𝐑𝐈𝐍𝐀](https://img.shields.io/badge/Zaid-Channel-red?style=for-the-badge&logo=telegram)](https://t.me/SUPERIOR_BOTS)</br></br>
-[![𝐅𝐋𝐎𝐑𝐈𝐍𝐀](https://img.shields.io/badge/Superior-Group-red?style=for-the-badge&logo=telegram)](https://t.me/SUPERIOR_SUPPORT)</br></br>
-[![CONTACT ME](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/Timesisnotwaiting)
+[![𝐅𝐋𝐎𝐑𝐈𝐍𝐀](https://img.shields.io/badge/Florina-Channel-red?style=for-the-badge&logo=telegram)](https://t.me/florina_channel)</br></br>
+[![𝐅𝐋𝐎𝐑𝐈𝐍𝐀](https://img.shields.io/badge/Florina-Group-red?style=for-the-badge&logo=telegram)](https://t.me/florina_support)</br></br>
+[![CONTACT ME](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/faraday789)
 
 ## 𝑻𝑯𝑨𝑵𝑲𝑺 𝑭𝑶𝑹 𝑪𝑶𝑫𝑬𝑺..
 
