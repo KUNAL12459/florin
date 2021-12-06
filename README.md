@@ -13,7 +13,7 @@
 </a>
 
 <p align = "center">
-<a href = "https://github.com/Yukki79/FlorinaRobot">
+<a href = "https://github.com/KUNAL12459/FlorinaRobot">
 <img src = "https://forthebadge.com/images/badges/open-source.svg">
 </p>
 </a>
@@ -39,11 +39,11 @@
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=Yukki79&repo=FlorinaRobot&theme=dark)
 
 ## 𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑬𝑳𝑭 𝑳𝑶𝑳
-[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yukki79/FlorinaRobot)
+[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KUNAL12459/FlorinaRobot)
 
 
 ## 𝑽𝑬𝑹𝑰𝑨𝑩𝑳𝑬𝑺
-[ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ](https://github.com/Itsunknown-12/Zaid-Robot/blob/master/Configuration)
+[ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ](https://github.com/KUNAL12459/FlorinaRobot/blob/master/Configuration)
 
 ## 𝑺𝑼𝑷𝑷𝑶𝑹𝑻
 [![𝐅𝐋𝐎𝐑𝐈𝐍𝐀](https://img.shields.io/badge/Florina-Channel-red?style=for-the-badge&logo=telegram)](https://t.me/florina_channel)</br></br>
