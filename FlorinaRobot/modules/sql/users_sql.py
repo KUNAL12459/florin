@@ -1,7 +1,7 @@
 import threading
 
-from TGNRobot import dispatcher
-from TGNRobot.modules.sql import BASE, SESSION
+from FlorinaRobot import dispatcher
+from FlorinaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
