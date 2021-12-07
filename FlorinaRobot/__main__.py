@@ -85,7 +85,7 @@ buttons = [
             text="𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦🔥", url="t.me/Florina_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 💫", url=f"https://github.com/KUNAL12459/FlorinaRobot"),
+        InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 💫", url=f"https://t.me/florina_support"),
         InlineKeyboardButton(
             text="𝗕𝗢𝗧 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🎃", url=f"https://t.me/{SUPPORT_CHAT}"
         ),
