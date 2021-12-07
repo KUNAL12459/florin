@@ -100,7 +100,7 @@ async def alive_function(answers):
     buttons = InlineKeyboard(row_width=2)
     bot_state = "Dead" if not await app.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Support Chat", url="https://t.me/KazukoSupportChat"),
+        InlineKeyboardButton("Support Chat", url="https://t.me/florina_support"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
@@ -118,7 +118,7 @@ async def alive_function(answers):
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
-            description="Check Kazuko's Stats",
+            description="Check Florina's Stats",
             thumb_url="https://telegra.ph/file/e4dcd9a32e7b93d6309fd.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
