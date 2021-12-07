@@ -74,30 +74,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-ʜᴏɪ, ɪ ᴍ ᴛɢɴ ʀᴏʙᴏᴛ
-`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ɪ ᴍ ᴠᴇʀʏ ᴘᴏᴡᴇʀꜰᴜʟʟ ʙᴏᴛ! ʜɪᴛ` /help
- [❤](https://telegra.ph/file/cab6825dea9263d347831.jpg)
+𝗛𝗘𝗟𝗟𝗢, 𝗜 𝗠 ⋆✦𝗙𝗟𝗢𝗥𝗜𝗡𝗔✦⋆ 𝗥𝗢𝗕𝗢𝗧
+`𝗜'𝗠 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗛𝗘𝗟𝗣 𝗬𝗢𝗨 𝗧𝗢 𝗠𝗔𝗡𝗔𝗚𝗘 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 𝗔𝗡𝗗 𝗜 𝗠 𝗩𝗘𝗥𝗬 𝗣𝗢𝗪𝗘𝗥𝗙𝗨𝗟 𝗕𝗢𝗧! 𝗛𝗜𝗧` /help
+ [💝](https://telegra.ph/file/cab6825dea9263d347831.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴛɢɴ ʀᴏʙᴏᴛ ᴛᴏ ᴜʀ ᴄʜᴀᴛ", url="t.me/TGN_Ro_bot?startgroup=true"),
+            text="𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦🔥", url="t.me/Florina_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ꜱᴏᴜʀᴄᴇ 💫", url=f"https://github.com/Itsunknown-12/TGN-Robot"),
+        InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 💫", url=f"https://github.com/KUNAL12459/FlorinaRobot"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/{SUPPORT_CHAT}"
+            text="𝗕𝗢𝗧 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🎃", url=f"https://t.me/{SUPPORT_CHAT}"
         ),
     ],
     [
-        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ ☑️", url=f"https://t.me/The_Godfather_Network"),
+        InlineKeyboardButton(text="𝗨𝗣𝗗𝗔𝗧𝗘𝗦 📡", url=f"https://t.me/florina_channel"),
         InlineKeyboardButton(
-            text="ᴛɢɴ ᴄʜᴀᴛ", url=f"https://t.me/greatpersonxd"
+            text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧 ⚡", url=f"https://t.me/florina_support"
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="help_back"),
+        InlineKeyboardButton(text="𝗛𝗘𝗟𝗣 𝗔𝗡𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="help_back"),
     ],
 ]
 
@@ -109,8 +109,8 @@ HELP_STRINGS = """
 START_IMG = "https://telegra.ph/file/63d1ee18f81c92d11210e.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [Lucifer](t.me/detctective_de) \
- Supporting isnt always financial! [ ɴᴇᴛᴡᴏʀᴋ](https://t.me/Zaid_updates) \
+ You can support the project [THN BOTS](t.me/THN_BOTS_SUPPORT) \
+ Supporting isnt always financial! [ NETWORK](https://t.me/THN_BOTS_NETWORK) \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_video(
-            START_IMG, caption= "<code>Zaid is Here For You❤\nI am Awake Since</code>: <code>{}</code>".format(
+            START_IMG, caption= "<code>✰𝙵𝙻𝙾𝚁𝙸𝙽𝙰✰ 𝙸𝚂 𝙷𝙴𝚁𝙴 𝙵𝙾𝚁 𝚈𝙾𝚄🌸\𝙽𝙸 𝙸 𝙰𝙼 𝙰𝙻𝙸𝚅𝙴 𝙳𝚄𝙳𝙴 🎈Since</code>: <code>{}</code>".format(
                 uptime            
             ),
             parse_mode=ParseMode.HTML,
