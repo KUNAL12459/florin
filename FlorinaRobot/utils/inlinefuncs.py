@@ -23,17 +23,17 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InputTextMessageContent)
 from search_engine_parser import GoogleSearch
 
-from KazukoBot.extrastuff import SUDOERS
-from KazukoBot import LOG_GROUP_ID
-from KazukoBot import pgram as app 
-from KazukoBot.arqclient import arq
-from KazukoBot.utils.keyboard import ikb
-from KazukoBot.core.tasks import _get_tasks_text, all_tasks, rm_task
-from KazukoBot.core.types import InlineQueryResultCachedDocument
-from KazukoBot.modules.info import get_chat_info, get_user_info
-from KazukoBot.modules.media import download_youtube_audio
-from KazukoBot.utils.functions import test_speedtest
-from KazukoBot.utils.pastebin import paste
+from FlorinaRobot.extrastuff import SUDOERS
+from FlorinaRobot import LOG_GROUP_ID
+from FlorinaRobot import pgram as app 
+from FlorinaRobot.arqclient import arq
+from FlorinaRobot.utils.keyboard import ikb
+from FlorinaRobot.core.tasks import _get_tasks_text, all_tasks, rm_task
+from FlorinaRobot.core.types import InlineQueryResultCachedDocument
+from FlorinaRobot.modules.info import get_chat_info, get_user_info
+from FlorinaRobot.modules.media import download_youtube_audio
+from FlorinaRobot.utils.functions import test_speedtest
+from FlorinaRobot.utils.pastebin import paste
 
 MESSAGE_DUMP_CHAT = LOG_GROUP_ID
 
