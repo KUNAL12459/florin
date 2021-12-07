@@ -1,6 +1,6 @@
 import threading
 
-from TGNRobot.modules.sql import BASE, SESSION
+from FlorinaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Column, Integer, UnicodeText
 
 
