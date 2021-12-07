@@ -87,7 +87,7 @@ async def inline_help_func(__help__):
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "https://github.com/heyaaman/KazukoBot"
+                "https://github.com/KUNAL12459/FlorinaRobot"
             ),
             thumb_url="https://telegra.ph/file/ce846cb6787682953acb8.jpg",
         ),
@@ -107,13 +107,13 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Kazuko✨](https://github.com/heyaaman/KazukoBot):**
+**[Florina✨](https://github.com/KUNAL12459/FlorinaRobot):**
 **RoBot:** `{bot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profile:** [Bot](https://t.me/KazukoRobot)   |   [Owner](https://t.me/heyaaman)
+**Profile:** [Bot](https://t.me/Florina_Robot)   |   [Owner](https://t.me/faraday789)
 """
     answers.append(
         InlineQueryResultArticle(
