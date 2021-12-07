@@ -76,7 +76,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 𝗛𝗘𝗟𝗟𝗢, 𝗜 𝗠 ⋆✦𝗙𝗟𝗢𝗥𝗜𝗡𝗔✦⋆ 𝗥𝗢𝗕𝗢𝗧
 `𝗜'𝗠 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗛𝗘𝗟𝗣 𝗬𝗢𝗨 𝗧𝗢 𝗠𝗔𝗡𝗔𝗚𝗘 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 𝗔𝗡𝗗 𝗜 𝗠 𝗩𝗘𝗥𝗬 𝗣𝗢𝗪𝗘𝗥𝗙𝗨𝗟 𝗕𝗢𝗧! 𝗛𝗜𝗧` /help
- [💝](https://telegra.ph/file/cab6825dea9263d347831.jpg)
+ [💝](https://telegra.ph/file/954737e6b697210e2523f.jpg)
 """
 
 buttons = [
