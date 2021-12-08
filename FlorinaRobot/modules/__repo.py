@@ -5,14 +5,14 @@ from pyrogram.types import *
 from FlorinaRobot.conf import get_str_key
 from FlorinaRobot import pbot
 
-REPO_TEXT = "**A Powerful [BOT](https://telegra.ph/file/cab6825dea9263d347831.jpg) to Make Your Groups Secured and Organized ! \n\n↼ Øwñêr ⇀ : 『 [Akki](t.me/godfatherakki) 』\n╭──────────────\n┣─ » Python ~ 3.8.6\n┣─ » Update ~ Recently\n╰──────────────\n\n»»» @The_Godfather_Network «««"
+REPO_TEXT = "**A Powerful [BOT](https://telegra.ph/file/cab6825dea9263d347831.jpg) to Make Your Groups Secured and Organized ! \n\n↼ Øwñêr ⇀ : 『 [OWNER](t.me/hehe860) 』\n╭──────────────\n┣─ » Python ~ 3.8.6\n┣─ » Update ~ Recently\n╰──────────────\n\n»»» @THN_BOTS_SUPPORT «««"
   
 BUTTONS = InlineKeyboardMarkup(
       [[
         InlineKeyboardButton("⚡ ʀᴇᴘᴏꜱɪᴛᴏʀʏ🔥", url=f"https://github.com/KUNAL12459/FlorinaRobot"),
         InlineKeyboardButton(" ᴊᴏɪɴ 💫", url=f"https://t.me/florina_support"),
       ],[
-        InlineKeyboardButton("ᴛɢɴ ᴏᴡɴᴇʀ ❣️", url="https://t.me/hehe860"),
+        InlineKeyboardButton("florina owner ❣️", url="https://t.me/hehe860"),
         InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url="https://t.me/florina_support"),
       ],[
         InlineKeyboardButton("⚡ ᴜᴘᴅᴀᴛᴇꜱ ☑️", url="https://t.me/florina_channel"),
