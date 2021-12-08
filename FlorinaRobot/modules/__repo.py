@@ -9,13 +9,13 @@ REPO_TEXT = "**A Powerful [FlorinaRobot](https://telegra.ph/file/bbaa5ef130c385e
   
 BUTTONS = InlineKeyboardMarkup(
       [[
-        InlineKeyboardButton("⚡ ʀᴇᴘᴏꜱɪᴛᴏʀʏ🔥", url=f"https://github.com/KUNAL12459/FlorinaRobot"),
+        InlineKeyboardButton("⚡ 𝗦𝗼𝘂𝗿𝗰𝗲🔥", url=f"https://github.com/KUNAL12459/FlorinaRobot"),
         InlineKeyboardButton(" ᴊᴏɪɴ 💫", url=f"https://t.me/florina_support"),
       ],[
-        InlineKeyboardButton("florina owner ❣️", url="https://t.me/hehe860"),
-        InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url="https://t.me/florina_support"),
+        InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥🇮🇳", url="https://t.me/hehe860"),
+        InlineKeyboardButton("𝗦𝗨𝗣𝗣𝗢𝗥𝗧 💬", url="https://t.me/florina_support"),
       ],[
-        InlineKeyboardButton("⚡ ᴜᴘᴅᴀᴛᴇꜱ ☑️", url="https://t.me/florina_channel"),
+        InlineKeyboardButton("📡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 📡", url="https://t.me/florina_channel"),
         InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ ➡️", url="https://t.me/hehe860"),
       ]]
     )
