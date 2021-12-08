@@ -17,10 +17,10 @@ from FlorinaRobot import telethn
 from PIL import Image, ImageDraw, ImageFont
 
 
-LOGO_LINKS            = ["https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
-                         "https://telegra.ph/file/c1ff2d5ec5e1b5bd1b200.jpg",
-                         "https://telegra.ph/file/08c5fbe14cc4b13d1de05.jpg",
-                         "https://telegra.ph/file/66614a049d74fe2a220dc.jpg",
+LOGO_LINKS            = ["https://telegra.ph/file/15ad263ca90d8a9968b85.jpg",
+                         "https://telegra.ph/file/1e59007708057e1a807b3.jpg",
+                         "https://telegra.ph/file/e086149fcc7d2b7658cde.jpg",
+                         "https://telegra.ph/file/85d68e3f718c92ce15b79.jpg",
                          "https://telegra.ph/file/9cc1e4b24bfa13873bd66.jpg",
                          "https://telegra.ph/file/792d38bd74b0c3165c11d.jpg",
                          "https://telegra.ph/file/e1031e28a4aa4d8bd7c9b.jpg",
