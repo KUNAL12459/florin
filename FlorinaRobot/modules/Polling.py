@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Sumans11
+# Copyright (C) 2021 FlorinaRobot
 
 
 # This file is part of FlorinaRobot (Telegram Bot)
