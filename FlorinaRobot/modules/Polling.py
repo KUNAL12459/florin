@@ -1,7 +1,7 @@
-# Copyright (C) 2021 TeamDaisyX
+# Copyright (C) 2021 Sumans11
 
 
-# This file is part of Daisy (Telegram Bot)
+# This file is part of FlorinaRobot (Telegram Bot)
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -28,9 +28,9 @@ from DaisyX.services.telethon import tbot
 MONGO_DB_URI = get_str_key("MONGO_URI", required=True)
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["DaisyX"]
+db = client["FlorinaRobot"]
 approved_users = db.approve
-dbb = client["DaisyX"]
+dbb = client["FlorinaRobot"]
 poll_id = dbb.pollid
 
 
