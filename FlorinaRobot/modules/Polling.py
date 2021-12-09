@@ -20,10 +20,10 @@ from pymongo import MongoClient
 from telethon import *
 from telethon.tl import *
 
-from DaisyX import BOT_ID
-from DaisyX.config import get_str_key
-from DaisyX.services.events import register
-from DaisyX.services.telethon import tbot
+from FlorinaRobot import BOT_ID
+from FlorinaRobot.config import get_str_key
+from FlorinaRobot.services.events import register
+from FlorinaRobot.services.telethon import tbot
 
 MONGO_DB_URI = get_str_key("MONGO_URI", required=True)
 client = MongoClient()
@@ -414,7 +414,7 @@ async def stop(event):
 
 
 __help__ = """
-You can now send polls anonymously with Daisy
+You can now send polls anonymously with Florina
 Here is how you can do it:
 <b> Parameters </b> -
  - poll-id - a poll id consists of an 5 digit random integer, this id is automatically removed from the system when you stop your previous poll
