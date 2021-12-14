@@ -58,4 +58,4 @@ async def mentionall(event):
         
 __mod_name__ = "Mention All"
 __help__ = """
-/call
+❍ /call - tag members of groups
