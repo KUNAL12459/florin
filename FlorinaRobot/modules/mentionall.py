@@ -55,7 +55,11 @@ async def mentionall(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-        
+
+      __help__ = """
+I can tag your groups members
+ ❍ /tag :tag your members
+ ❍ /call :call your groups members
+"""  
 __mod_name__ = "Mention All"
-__help__ = """
-❍ /call - tag members of groups
+
