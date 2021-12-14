@@ -57,3 +57,5 @@ async def mentionall(event):
         usrtxt = ""
         
 __mod_name__ = "Mention All"
+__help__ = """
+/call
