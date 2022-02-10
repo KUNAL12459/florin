@@ -25,7 +25,7 @@ from FlorinaRobot import (
     REQUESTER,
     dispatcher,
 )
-from FlorinaRobot.Plugins.disable import DisableAbleCommandHandler
+from FlorinaRobot.modules.disable import DisableAbleCommandHandler
 from FlorinaRobot.Handlers.validation import (
     bot_admin,
     can_restrict,
@@ -38,9 +38,9 @@ from FlorinaRobot.Handlers.validation import (
     user_admin_no_reply,
     can_delete,
 )
-from FlorinaRobot.Handlers.extraction import extract_user_and_text
-from FlorinaRobot.Handlers.string_handling import extract_time
-from FlorinaRobot.Plugins.Admin.log_channel import gloggable, loggable
+from FlorinaRobot.modules.helper_funcs.extraction import extract_user_and_text
+from FlorinaRobot.modules.helper_funcs.string_handling import extract_time
+from FlorinaRobot.modules.Admin.log_channel import gloggable, loggable
 
 
  
@@ -82,9 +82,9 @@ def ban(update: Update, context: CallbackContext) -> str:
             message.reply_text(
                 "Fighting this Inspector here will put civilian lives at risk."
             )
-        elif user_id in REQUESTER:
+        elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Alexia Management to fight a Requester."
+                "Bring an order from Heroes association to fight a Tiger disaster."
             )
         else:
             message.reply_text("This user has immunity and cannot be banned.")
@@ -405,7 +405,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     message = update.effective_message
     user = update.effective_user
     bot, args = context.bot, context.args
-    if user.id not in INSPECTOR or user.id not in REQUESTER:
+    if user.id not in DRAGONS or user.id not in TIGERS:
         return
 
     try:
