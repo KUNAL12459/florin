@@ -11,6 +11,7 @@ from FlorinaRobot import (
     LOGGER,
     OWNER_ID,
     PORT,
+    BOT_TUT,
     SUPPORT_CHAT,
     TOKEN,
     URL,
