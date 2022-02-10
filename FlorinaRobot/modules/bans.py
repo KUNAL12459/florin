@@ -21,8 +21,8 @@ from FlorinaRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
-    INSPECTOR,
-    REQUESTER,
+    DRAGONS,
+    TIGERS,
     dispatcher,
 )
 from FlorinaRobot.modules.disable import DisableAbleCommandHandler
@@ -78,9 +78,9 @@ def ban(update: Update, context: CallbackContext) -> str:
             message.reply_text("Trying to put me against a God level disaster huh?")
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")
-        elif user_id in INSPECTOR:
+        elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Inspector here will put civilian lives at risk."
+                "Fighting this Dragons here will put civilian lives at risk."
             )
         elif user_id in TIGERS:
             message.reply_text(
