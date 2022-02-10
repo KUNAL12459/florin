@@ -126,7 +126,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Pikachu.modules." + module_name)
+    imported_module = importlib.import_module("FlorinaRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -356,7 +356,7 @@ def help_button(update, context):
 @run_async
 def Pikachu_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "pikachu_":
+    if query.data == "florina_":
         query.message.edit_text(
             text=""" ℹ️ I'm *Alexia*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
@@ -378,7 +378,7 @@ def Pikachu_about_callback(update: Update, context: CallbackContext):
                 ]
             ),
         )
-    elif query.data == "pikachu_back":
+    elif query.data == "florina_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
