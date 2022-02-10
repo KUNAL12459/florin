@@ -40,7 +40,7 @@ from FlorinaRobot.modules.helper_funcs.chat_status import (
 )
 from FlorinaRobot.modules.helper_funcs.extraction import extract_user_and_text
 from FlorinaRobot.modules.helper_funcs.string_handling import extract_time
-from FlorinaRobot.modules.Admin.log_channel import gloggable, loggable
+from FlorinaRobot.modules.log_channel import gloggable, loggable
 
 
  
