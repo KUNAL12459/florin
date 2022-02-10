@@ -73,12 +73,12 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-START_IMG = "https://telegra.ph/file/76c5e6cc99bdb601420fd.jpg"
+START_IMG = "https://telegra.ph/file/df8f01ba7c9ef965291e4.jpg"
 
 PM_START_TEXT = """
 `Hellow My name is` *ALEXIA*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.`
-[🥳](https://telegra.ph/fil)
+[🥳](https://telegra.ph/file/df8f01ba7c9ef965291e4.jpg)
 """
 
 
