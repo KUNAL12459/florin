@@ -84,7 +84,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             )
         elif user_id in REQUESTER:
             message.reply_text(
-                "Bring an order from Yone Management to fight a Requester."
+                "Bring an order from Alexia Management to fight a Requester."
             )
         else:
             message.reply_text("This user has immunity and cannot be banned.")
