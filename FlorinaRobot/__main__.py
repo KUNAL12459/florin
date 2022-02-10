@@ -354,7 +354,7 @@ def help_button(update, context):
 
 
 @run_async
-def Pikachu_about_callback(update: Update, context: CallbackContext):
+def Florina_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "florina_":
         query.message.edit_text(
@@ -706,7 +706,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(Pikachu_about_callback, pattern=r"pikachu_")
+    about_callback_handler = CallbackQueryHandler(Florina_about_callback, pattern=r"florina_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
