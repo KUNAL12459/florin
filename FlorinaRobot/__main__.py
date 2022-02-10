@@ -415,14 +415,6 @@ def Source_about_callback(update: Update, context: CallbackContext):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-        
-@run_async
-def florina_vida(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "florina_vida":
-        query.message.edit_text(
-            text=""" Hi..🤗 I'm *ALEXIA*
-                 \nHere is the tutorial how to set-up me in your chat [tutorial](https://telegra.ph/file/8b55e8c6c527d19d28125.mp4) .""",
 
 @run_async
 def get_help(update: Update, context: CallbackContext):
