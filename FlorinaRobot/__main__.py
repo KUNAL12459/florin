@@ -101,7 +101,7 @@ buttons = [
         InlineKeyboardButton(
             text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
         InlineKeyboardButton(
-            text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", callback_data="florina_vida")],),
+            text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", callback_data="florina_vida"),
     ],
     [
         InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat=""),          
