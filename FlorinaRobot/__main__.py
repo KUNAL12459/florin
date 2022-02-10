@@ -78,7 +78,7 @@ START_IMG = "https://telegra.ph/file/76c5e6cc99bdb601420fd.jpg"
 PM_START_TEXT = """
 `Hellow My name is` *ALEXIA*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.`
-[🥳](https://telegra.ph/file/76c5e6cc99bdb601420fd.jpg)
+[🥳](https://telegra.ph/fil)
 """
 
 
