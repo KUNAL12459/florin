@@ -72,46 +72,48 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+START_IMG = "https://telegra.ph/file/76c5e6cc99bdb601420fd.jpg"
 
 PM_START_TEXT = """
-𝗛𝗘𝗟𝗟𝗢, 𝗜 𝗠 ⋆✦𝗙𝗟𝗢𝗥𝗜𝗡𝗔✦⋆ 𝗥𝗢𝗕𝗢𝗧
-`𝗜'𝗠 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗛𝗘𝗟𝗣 𝗬𝗢𝗨 𝗧𝗢 𝗠𝗔𝗡𝗔𝗚𝗘 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 𝗔𝗡𝗗 𝗜 𝗠 𝗩𝗘𝗥𝗬 𝗣𝗢𝗪𝗘𝗥𝗙𝗨𝗟 𝗕𝗢𝗧! 𝗛𝗜𝗧` /help
- [💝](https://telegra.ph/file/954737e6b697210e2523f.jpg)
+`Hellow My name is` *ALEXIA*
+`I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.`
+[🥳](https://telegra.ph/file/76c5e6cc99bdb601420fd.jpg)
 """
+
+
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦🔥", url="t.me/Florina_robot?startgroup=true"),
+            text="✅ 𝙰𝙳𝙳 𝙰𝙻𝙴𝚇𝙸𝙰 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ✅", url="t.me/Alexia_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="𝗦𝗢𝗨𝗥𝗖𝗘 💫", url=f"https://t.me/florina_support"),
+        InlineKeyboardButton(text="📩 𝙰𝙱𝙾𝚄𝚃", callback_data="florina_"),
+        InlineKeyboardButton(text="📝 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", callback_data="help_back"),
+    ],
+    [
         InlineKeyboardButton(
-            text="𝗕𝗢𝗧 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🎃", url=f"https://t.me/{SUPPORT_CHAT}"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="𝗨𝗣𝗗𝗔𝗧𝗘𝗦 📡", url=f"https://t.me/florina_channel"),
+            text="💝 𝚂𝙾𝚄𝚁𝙲𝙴", callback_data="source_"),
         InlineKeyboardButton(
-            text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧 ⚡", url=f"https://t.me/florina_support"
-        ),
+            text="📡 𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/ALEXIA_SUPPORT"),
     ],
     [
-        InlineKeyboardButton(text="𝗛𝗘𝗟𝗣 𝗔𝗡𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="help_back"),
+        InlineKeyboardButton(
+            text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
+        InlineKeyboardButton(
+            text="𝙷𝙾𝚆 𝚄𝚂𝙴 𝙼𝙴", url="https://telegra.ph/file/8b55e8c6c527d19d28125.mp4"),
+    ],
+    [
+        InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat=""),          
     ],
 ]
 
-
 HELP_STRINGS = """
-`ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ, ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ..`
-ᴀʟꜱᴏ ʏᴏᴜ ᴄᴀɴ ᴀꜱᴋ ᴀɴʏᴛʜɪɴɢ ɪɴ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ [❤️](https://telegra.ph/file/954737e6b697210e2523f.jpg)"""
+*HELP BUTTONS HERE*"""
 
-START_IMG = "https://telegra.ph/file/8ac797a1082274972e1b0.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project [THN BOTS](t.me/THN_BOTS_SUPPORT) \
- Supporting isnt always financial! [ NETWORK](https://t.me/THN_BOTS_NETWORK) \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+ You can support the project via [SAURABH](t.me/Saur12p)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -124,12 +126,14 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("FlorinaRobot.modules." + module_name)
+    imported_module = importlib.import_module("Pikachu.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
     if imported_module.__mod_name__.lower() not in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
+    else:
+        raise Exception("Can't have two modules with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
@@ -211,19 +215,16 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            first_name = update.effective_user.first_name
             update.effective_message.reply_text(
-                PM_START_TEXT.format(
-                    escape_markdown(first_name),
-                    escape_markdown(context.bot.first_name)),
+                PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
     else:
-        update.effective_message.reply_video(
-            START_IMG, caption= "<code>✰𝙵𝙻𝙾𝚁𝙸𝙽𝙰✰ 𝙸𝚂 𝙷𝙴𝚁𝙴 𝙵𝙾𝚁 𝚈𝙾𝚄🌸\𝙽𝙸 𝙸 𝙰𝙼 𝙰𝙻𝙸𝚅𝙴 𝙳𝚄𝙳𝙴 🎈Since</code>: <code>{}</code>".format(
-                uptime            
+        update.effective_message.reply_text(
+            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                uptime
             ),
             parse_mode=ParseMode.HTML,
         )
@@ -301,7 +302,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "「 *HELP FOR* *{}* 」:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -311,7 +312,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
                 ),
             )
 
@@ -353,32 +354,31 @@ def help_button(update, context):
 
 
 @run_async
-def zaid_about_callback(update, context):
+def Pikachu_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "zaid_":
+    if query.data == "pikachu_":
         query.message.edit_text(
-            text=""" ℹ️ I am [FlorinaRobot](t.me/Florina_robot), a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Alexia*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\n_TGN's licensed under the GNU General Public License v3.0_
-                 \n❍ Assistant @florina\_assis.
-                 \nHere is the [💾Repository](https://t.me/florina_support).
-                 \n\nIf you have any question about bot, let us know at .""",
+                 \n_Masha's licensed under the GNU General Public License v3.0_
+                 \nHere is the [💾Repository](https://github.com/KUNAL12459/Alexia).
+                 \n\nIf you have any question about Alexia, let us know at @Alexiasupport.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="zaid_back")
+                    InlineKeyboardButton(text="Back", callback_data="florina_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "zaid_back":
+    elif query.data == "pikachu_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -389,14 +389,14 @@ def zaid_about_callback(update, context):
 
 
 @run_async
-def Source_about_callback(update, context):
+def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I am [FlorinaRobot](t.me/Florina_robot)
-                 \nHere is the [Source Code](https://t.me/florina_support) .""",
+            text=""" Hi..🤗 I'm *ALEXIA*
+                 \nHere is the [Source Code](https://github.com/KUNAL12459/Alexia) .""",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
@@ -641,7 +641,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 412094015 and DONATION_LINK:
+        if OWNER_ID != 797768146  and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -706,7 +706,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(zaid_about_callback, pattern=r"zaid_")
+    about_callback_handler = CallbackQueryHandler(Pikachu_about_callback, pattern=r"pikachu_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
