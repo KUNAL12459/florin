@@ -27,9 +27,9 @@ from FlorinaRobot.modules.helper_funcs.chat_status import (
     user_can_ban,
     can_delete,
 )
-from Pikachu.modules.helper_funcs.extraction import extract_user_and_text
-from Pikachu.modules.helper_funcs.string_handling import extract_time
-from Pikachu.modules.log_channel import gloggable, loggable
+from FlorinaRobot.modules.helper_funcs.extraction import extract_user_and_text
+from FlorinaRobot.modules.helper_funcs.string_handling import extract_time
+from FlorinaRobot.modules.log_channel import gloggable, loggable
 
 
 @run_async
