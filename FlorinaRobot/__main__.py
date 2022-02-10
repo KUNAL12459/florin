@@ -111,6 +111,7 @@ buttons = [
 HELP_STRINGS = """
 *HELP BUTTONS HERE*"""
 
+FLORINA_VIDA = f"{BOT_TUT}"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [SAURABH](t.me/Saur12p)"""
