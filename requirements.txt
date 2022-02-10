@@ -11,9 +11,9 @@ httpx
 pykeyboard
 beautifulsoup4
 python-arq==6.0.3
-requests==2.20.0
-python-telegram-bot==12.8
-sqlalchemy==1.3.20
+requests==2.27.1
+python-telegram-bot==13.11.0
+sqlalchemy==1.3.23
 psycopg2-binary
 googletrans==4.0.0-rc1
 ffmpeg-python
@@ -38,7 +38,7 @@ regex
 bleach
 git+https://github.com/starry69/python-markdown2.git
 wikipedia
-telethon==1.22.0
+telethon==1.24.0
 telegraph
 heroku3
 spamwatch
@@ -79,4 +79,4 @@ nudepy
 motor
 cloudscraper
 gpytranslate
-cv2
+opencv-python-headless
