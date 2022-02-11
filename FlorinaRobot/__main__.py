@@ -90,18 +90,12 @@ buttons = [
     [
         InlineKeyboardButton(text="📩 𝙰𝙱𝙾𝚄𝚃", callback_data="florina_"),
         InlineKeyboardButton(text="📝 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", callback_data="help_back"),
+        InlineKeyboardButton(text="💝 𝚂𝙾𝚄𝚁𝙲𝙴", callback_data="source_"),
     ],
     [
-        InlineKeyboardButton(
-            text="💝 𝚂𝙾𝚄𝚁𝙲𝙴", callback_data="source_"),
-        InlineKeyboardButton(
-            text="📡 𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/ALEXIA_SUPPORT"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
-        InlineKeyboardButton(
-            text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", url="https://t.me/ALEXIA_UPDATE/10"),
+        InlineKeyboardButton(text="📡 𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/ALEXIA_SUPPORT"),
+        InlineKeyboardButton(text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
+        InlineKeyboardButton(text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", url="https://t.me/ALEXIA_UPDATE/10"),
     ],
     [
         InlineKeyboardButton(text="𝚃𝚁𝚈 𝙸𝙽𝙻𝙸𝙽𝙴",switch_inline_query_current_chat=""),          
