@@ -11,7 +11,6 @@ from FlorinaRobot import (
     LOGGER,
     OWNER_ID,
     PORT,
-    BOT_TUT,
     SUPPORT_CHAT,
     TOKEN,
     URL,
@@ -102,7 +101,7 @@ buttons = [
         InlineKeyboardButton(
             text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
         InlineKeyboardButton(
-            text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", callback_data="florina_vida"),
+            text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", url="https://t.me/ALEXIA_UPDATE/10"),
     ],
     [
         InlineKeyboardButton(text="𝚃𝚁𝚈 𝙸𝙽𝙻𝙸𝙽𝙴",switch_inline_query_current_chat=""),          
@@ -112,7 +111,6 @@ buttons = [
 HELP_STRINGS = """
 *HELP BUTTONS HERE*"""
 
-FLORINA_VIDA = f"{BOT_TUT}"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [SAURABH](t.me/Saur12p)"""
