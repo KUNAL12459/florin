@@ -11,7 +11,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
-from ShasaBot import (
+from FlorinaRobot import (
     DEV_USERS,
     FAFNIRS,
     LOGGER,
@@ -72,23 +72,23 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against a Master huh?")
+            message.reply_text("Trying to put me against a God level disaster huh?")
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")
-        elif user_id in REDLIONS:
+        elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Bersekser here will put user lives at risk."
+                "Fighting this Dragon here will put civilian lives at risk."
             )
-        elif user_id in SPRYZONS:
+        elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Master Servant to fight a Assasin servant."
+                "Bring an order from Heroes association to fight a Demon disaster."
             )
-        elif user_id in FAFNIRS:
+        elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Master Servant to fight a Lancer servant."
+                "Bring an order from Heroes association to fight a Tiger disaster."
             )
-        elif user_id in LUINORS:
-            message.reply_text("Rider abilities make them ban immune!")
+        elif user_id in WOLVES:
+            message.reply_text("wolf abilities make them ban immune!")
         else:
             message.reply_text("This user has immunity and cannot be banned.")
         return log_message
@@ -449,7 +449,7 @@ def selfunban(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     bot, args = context.bot, context.args
-    if user.id not in REDLIONS or user.id not in FAFNIRS:
+    if user.id not in DRAGONS or user.id not in TIGERS:
         return
 
     try:
