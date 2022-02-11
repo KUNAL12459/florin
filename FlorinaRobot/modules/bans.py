@@ -13,12 +13,12 @@ from telegram.utils.helpers import mention_html
 
 from FlorinaRobot import (
     DEV_USERS,
-    FAFNIRS,
+    TIGERS,
     LOGGER,
-    LUINORS,
+    WOLVES,
     OWNER_ID,
-    REDLIONS,
-    SPRYZONS,
+    DRAGONS,
+    DEMONS,
     dispatcher,
 )
 from FlorinaRobot.modules.disable import DisableAbleCommandHandler
