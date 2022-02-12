@@ -428,20 +428,14 @@ def get_help(update: Update, context: CallbackContext):
                 f"Contact me in PM to get help of {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
-                         [
+                        [
                             InlineKeyboardButton(
                                 text="Help",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
-                             )
-                          ]
-                        [
-                            InlineKeyboardButton(
-                                text="Support",
-                                url="https://t.me/ALEXIA_SUPPORT"
-                                ),
-                         ]
+                            )
+                        ]
                     ]
                 ),
             )
@@ -449,24 +443,22 @@ def get_help(update: Update, context: CallbackContext):
         update.effective_message.reply_text(
             "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup(
+                [
                     [
-                         [
-                            InlineKeyboardButton(
-                                text="Help",
-                                url="t.me/{}?start=ghelp_{}".format(
-                                    context.bot.username, module
-                                ),
-                             )
-                          ]
-                        [
-                            InlineKeyboardButton(
-                                text="Support",
-                                url="https://t.me/ALEXIA_SUPPORT"
-                                ),
-                         ]
-                    ]
-                ),
-            )
+                        InlineKeyboardButton(
+                            text="Help",
+                            url="t.me/{}?start=help".format(context.bot.username),
+                        )
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Support Chat ",
+                            url="https://t.me/ALEXIA_SUPPORT",
+                        )
+                    ],
+                ]
+            ),
+        )
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
