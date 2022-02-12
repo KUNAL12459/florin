@@ -429,19 +429,18 @@ def get_help(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                          [
-                             InlineKeyboardButton(
-                                 text="Help",
-                                 url="t.me/{}?start=ghelp_{}".format(
-                                     context.bot.username, module
-                                 ),
+                            InlineKeyboardButton(
+                                text="Help",
+                                url="t.me/{}?start=ghelp_{}".format(
+                                    context.bot.username, module
+                                ),
                              )
                           ]
                         [
-                             InlineKeyboardButton(
-                                 text="Support",
-                                 url="https://t.me/ALEXIA_SUPPORT"
-                                 ),
-                             )
+                            InlineKeyboardButton(
+                                text="Support",
+                                url="https://t.me/ALEXIA_SUPPORT"
+                                ),
                          ]
                     ]
                 ),
@@ -452,19 +451,18 @@ def get_help(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                     [
                          [
-                             InlineKeyboardButton(
-                                 text="Help",
-                                 url="t.me/{}?start=ghelp_{}".format(
-                                     context.bot.username, module
-                                 ),
+                            InlineKeyboardButton(
+                                text="Help",
+                                url="t.me/{}?start=ghelp_{}".format(
+                                    context.bot.username, module
+                                ),
                              )
                           ]
                         [
-                             InlineKeyboardButton(
-                                 text="Support",
-                                 url="https://t.me/ALEXIA_SUPPORT"
-                                 ),
-                             )
+                            InlineKeyboardButton(
+                                text="Support",
+                                url="https://t.me/ALEXIA_SUPPORT"
+                                ),
                          ]
                     ]
                 ),
