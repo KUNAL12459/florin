@@ -270,7 +270,7 @@ async def lego(event):
     pointsize = 500
     fillcolor = "black"
     shadowcolor = "blue"
-    fnt = glob.glob("./Pikachu/resources/font/*")
+    fnt = glob.glob("./FlorinaRobot/resources/font/*")
     randf = random.choice(fnt)
     font = ImageFont.truetype(randf, 120)
     w, h = draw.textsize(text, font=font)
@@ -280,10 +280,10 @@ async def lego(event):
     x = (image_widthz-w)/2
     y = ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="white", stroke_width=5, stroke_fill="black")
-    fname = "Pikachu.jpg"
+    fname = "FlorinaRobot.jpg"
     img.save(fname, "png")
     await pesan.edit('`Done`')
-    await telethn.send_file(event.chat_id, file=fname, caption = f"Made by [ALEXIA😽](t.me/ALEXIA_SUPPORT)")
+    await telethn.send_file(event.chat_id, file=fname, caption = f"Made by [ALEXIA🌸](t.me/ALEXIA_SUPPORT)")
     await pesan.delete()
     if os.path.exists(fname):
             os.remove(fname)
