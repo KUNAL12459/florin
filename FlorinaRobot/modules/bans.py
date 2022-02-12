@@ -242,9 +242,9 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
                 [
                     [
                         InlineKeyboardButton(
-                            text="Unban", callback_data=f"unbanb_unban={user_id}"
+                            text="Unban ⚙️", callback_data=f"unbanb_unban={user_id}"
                         ),
-                        InlineKeyboardButton(text="Delete", callback_data="unbanb_del"),
+                        InlineKeyboardButton(text="Delete 🗑️", callback_data="unbanb_del"),
                     ]
                 ]
             ),
