@@ -105,6 +105,7 @@ buttons = [
 HELP_STRINGS = """
 *HELP BUTTONS HERE*"""
 
+FLORINA_IMG = "https://telegra.ph/file/df8f01ba7c9ef965291e4.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [SAURABH](t.me/Saur12p)"""
@@ -216,8 +217,8 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+        update.effective_message.reply_photo(
+          FLORINA_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -227,7 +228,7 @@ def start(update: Update, context: CallbackContext):
                   
             ),
         )
-        )
+        
 
 
 def error_handler(update, context):
