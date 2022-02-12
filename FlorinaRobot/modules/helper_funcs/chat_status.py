@@ -189,6 +189,11 @@ def user_admin(func):
         user = update.effective_user
         chat = update.effective_chat
 
+        if user and user.id == 1087968824:
+            msg = update.effective_message
+            anonymous_data[f"{chat.id}_{msg.message_id}"] = {"func":func, "message":msg}
+            bot.send_message(chat.id, "It looks like you're anonymous. Tap this button to confirm your identity.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Click here to prove admin", callback_data=f"anonAdmin_{chat.id}_{msg.message_id}")]]))
+            return False
         if user and is_user_admin(chat, user.id):
             return func(update, context, *args, **kwargs)
         elif not user:
@@ -199,8 +204,11 @@ def user_admin(func):
             except:
                 pass
         else:
+            if update.callback_query:
+                update.callback_query.answer("You need to be admin to do this.")
+                return ""
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "Who dis non-admin telling me what to do? You want a punch?",
             )
 
     return is_admin
@@ -209,7 +217,7 @@ def user_admin(func):
 def user_admin_no_reply(func):
     @wraps(func)
     def is_not_admin_no_reply(
-        update: Update, context: CallbackContext, *args, **kwargs
+        update: Update, context: CallbackContext, *args, **kwargs,
     ):
         bot = context.bot
         user = update.effective_user
@@ -233,6 +241,8 @@ def user_not_admin(func):
     def is_not_admin(update: Update, context: CallbackContext, *args, **kwargs):
         bot = context.bot
         user = update.effective_user
+        if not user:
+            return
         chat = update.effective_chat
 
         if user and not is_user_admin(chat, user.id):
@@ -254,7 +264,7 @@ def bot_admin(func):
         if update_chat_title == message_chat_title:
             not_admin = "I'm not admin! - REEEEEE"
         else:
-            not_admin = f"I'm not admin in <b>{update_chat_title}</b>! - REEEEEE"
+            not_admin = f"I'm not admin in <b>{html.escape(update_chat_title)}</b>! - REEEEEE"
 
         if is_bot_admin(chat, bot.id):
             return func(update, context, *args, **kwargs)
@@ -275,7 +285,7 @@ def bot_can_delete(func):
         if update_chat_title == message_chat_title:
             cant_delete = "I can't delete messages here!\nMake sure I'm admin and can delete other user's messages."
         else:
-            cant_delete = f"I can't delete messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can delete other user's messages there."
+            cant_delete = f"I can't delete messages in <b>{html.escape(update_chat_title)}</b>!\nMake sure I'm admin and can delete other user's messages there."
 
         if can_delete(chat, bot.id):
             return func(update, context, *args, **kwargs)
@@ -283,7 +293,6 @@ def bot_can_delete(func):
             update.effective_message.reply_text(cant_delete, parse_mode=ParseMode.HTML)
 
     return delete_rights
-
 
 def can_pin(func):
 
@@ -358,7 +367,10 @@ def user_can_ban(func):
     @wraps(func)
     def user_is_banhammer(update: Update, context: CallbackContext, *args, **kwargs):
         bot = context.bot
-        user = update.effective_user.id
+        user = update.effective_user
+        if not user:
+            return
+        user = user.id
         member = update.effective_chat.get_member(user)
         if (
             not (member.can_restrict_members or member.status == "creator")
@@ -366,17 +378,86 @@ def user_can_ban(func):
             and user not in [777000, 1087968824]
         ):
             update.effective_message.reply_text(
-                "😹 Sorry You can't do that"
+                "Sorry son, but you're not worthy to wield the banhammer.",
             )
             return ""
         return func(update, context, *args, **kwargs)
 
     return user_is_banhammer
 
+def user_can_promote(func):
+    @wraps(func)
+    def user_is_promoter(update: Update, context: CallbackContext, *args, **kwargs):
+        bot = context.bot
+        user = update.effective_user
+        if not user:
+            return
+        user = user.id
+        member = update.effective_chat.get_member(user)
+        no_rights = "You do not have 'add admin' rights."
+        if (
+            not (member.can_promote_members or member.status == "creator")
+            and user not in DRAGONS
+            and user not in [777000, 1087968824]
+        ):
+            if not update.callback_query:
+                update.effective_message.reply_text(no_rights)
+            else:
+                update.callback_query.answer(no_rights, show_alert=True)
+            return ""
+        return func(update, context, *args, **kwargs)
+
+    return user_is_promoter
+
+def user_can_change_info(func):
+    @wraps(func)
+    def wrapper(update: Update, context: CallbackContext, *args, **kwargs):
+        bot = context.bot
+        user = update.effective_user
+        if not user:
+            return
+        user = user.id
+        member = update.effective_chat.get_member(user)
+        no_rights = "You do not have 'change group info' rights."
+        if (
+            not (member.can_change_info or member.status == "creator")
+            and user not in DRAGONS
+            and user not in [777000, 1087968824]
+        ):
+            if not update.callback_query:
+                update.effective_message.reply_text(no_rights)
+            else:
+                update.callback_query.answer(no_rights, show_alert=True)
+            return ""
+        return func(update, context, *args, **kwargs)
+
+    return wrapper
+
+def bot_can_change_info(func):
+    @wraps(func)
+    def change_info_rights(update: Update, context: CallbackContext, *args, **kwargs):
+        bot = context.bot
+        chat = update.effective_chat
+        update_chat_title = chat.title
+        message_chat_title = update.effective_message.chat.title
+
+        if update_chat_title == message_chat_title:
+            cant_change = "I can't change group info here!\nMake sure I'm admin and can change group info."
+        else:
+            cant_change = f"I can't change group info in <b>{html.escape(update_chat_title)}</b>!\nMake sure I'm admin and can change group info."
+
+        if chat.get_member(bot.id).can_change_info:
+            return func(update, context, *args, **kwargs)
+        else:
+            update.effective_message.reply_text(cant_change, parse_mode=ParseMode.HTML)
+
+    return change_info_rights
 
 def connection_status(func):
     @wraps(func)
     def connected_status(update: Update, context: CallbackContext, *args, **kwargs):
+        if not update.effective_user:
+            return connected_status
         conn = connected(
             context.bot,
             update,
@@ -392,7 +473,7 @@ def connection_status(func):
         else:
             if update.effective_message.chat.type == "private":
                 update.effective_message.reply_text(
-                    "Send /connect in a group that you and I have in common first."
+                    "Send /connect in a group that you and I have in common first.",
                 )
                 return connected_status
 
