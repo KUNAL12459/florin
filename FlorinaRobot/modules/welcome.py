@@ -263,90 +263,78 @@ def new_member(update: Update, context: CallbackContext):
                 continue
 
             # Welcome yourself
-            elif new_mem.id == bot.id:
-                creator = None
-                if not FlorinaRobot.ALLOW_CHATS:
-                    with suppress(BadRequest):
-                         update.effective_message.reply_text(f"Groups are disabled for {bot.first_name}, I'm outta here.")
-                    bot.leave_chat(update.effective_chat.id)
-                    return
-                for x in bot.bot.get_chat_administrators(update.effective_chat.id):
-                    if x.status == "creator":
-                        creator = x.user
-                        break
-                if creator:
-                    bot.send_message(
-                        JOIN_LOGGER,
-                        "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>\n<b>Creator:</b> <code>{}</code>".format(
-                            html.escape(chat.title), chat.id, html.escape(creator)
-                        ),
-                        parse_mode=ParseMode.HTML,
-                    )
-                else:
-                    bot.send_message(
-                        JOIN_LOGGER,
-                        "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>".format(
-                            html.escape(chat.title), chat.id
-                        ),
-                        parse_mode=ParseMode.HTML,
-                    )
+            if new_mem.id == bot.id:
                 update.effective_message.reply_text(
-                    "Watashi ga kita!", reply_to_message_id=reply
+                    "Hey {}, I'm {}! Thank you for adding me to {}\n"
+                    "Join support and channel update with clicking button below!".format(
+                        user.first_name, context.bot.first_name, chat.title
+                    ),
+                    reply_to_message_id=reply,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton(
+                                    text=" Support", url="https://t.me/ALEXIA_SUPPORT"
+                                ),
+                                InlineKeyboardButton(
+                                    text="Updates", url="https://t.me/ALEXIA_UPDATE"
+                                ),
+                            ]
+                        ],
+                    ),
                 )
                 continue
+            buttons = sql.get_welc_buttons(chat.id)
+            keyb = build_keyboard(buttons)
 
-            else:
-                buttons = sql.get_welc_buttons(chat.id)
-                keyb = build_keyboard(buttons)
+            if welc_type not in (sql.Types.TEXT, sql.Types.BUTTON_TEXT):
+                media_wel = True
 
-                if welc_type not in (sql.Types.TEXT, sql.Types.BUTTON_TEXT):
-                    media_wel = True
+            first_name = (
+                new_mem.first_name or "PersonWithNoName"
+            )  # edge case of empty name - occurs for some bugs.
 
-                first_name = (
-                    new_mem.first_name or "PersonWithNoName"
-                )  # edge case of empty name - occurs for some bugs.
-
-                if cust_welcome:
-                    if cust_welcome == sql.DEFAULT_WELCOME:
-                        cust_welcome = random.choice(
-                            sql.DEFAULT_WELCOME_MESSAGES
-                        ).format(first=escape_markdown(first_name))
-
-                    if new_mem.last_name:
-                        fullname = escape_markdown(f"{first_name} {new_mem.last_name}")
-                    else:
-                        fullname = escape_markdown(first_name)
-                    count = chat.get_members_count()
-                    mention = mention_markdown(new_mem.id, escape_markdown(first_name))
-                    if new_mem.username:
-                        username = "@" + escape_markdown(new_mem.username)
-                    else:
-                        username = mention
-
-                    valid_format = escape_invalid_curly_brackets(
-                        cust_welcome, VALID_WELCOME_FORMATTERS
-                    )
-                    res = valid_format.format(
-                        first=escape_markdown(first_name),
-                        last=escape_markdown(new_mem.last_name or first_name),
-                        fullname=escape_markdown(fullname),
-                        username=username,
-                        mention=mention,
-                        count=count,
-                        chatname=escape_markdown(chat.title),
-                        id=new_mem.id,
-                    )
-
-                else:
-                    res = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(
+            if cust_welcome:
+                if cust_welcome == sql.DEFAULT_WELCOME:
+                    cust_welcome = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(
                         first=escape_markdown(first_name)
                     )
-                    keyb = []
 
-                backup_message = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(
+                if new_mem.last_name:
+                    fullname = escape_markdown(f"{first_name} {new_mem.last_name}")
+                else:
+                    fullname = escape_markdown(first_name)
+                count = chat.get_members_count()
+                mention = mention_markdown(new_mem.id, escape_markdown(first_name))
+                if new_mem.username:
+                    username = "@" + escape_markdown(new_mem.username)
+                else:
+                    username = mention
+
+                valid_format = escape_invalid_curly_brackets(
+                    cust_welcome, VALID_WELCOME_FORMATTERS
+                )
+                res = valid_format.format(
+                    first=escape_markdown(first_name),
+                    last=escape_markdown(new_mem.last_name or first_name),
+                    fullname=escape_markdown(fullname),
+                    username=username,
+                    mention=mention,
+                    count=count,
+                    chatname=escape_markdown(chat.title),
+                    id=new_mem.id,
+                )
+
+            else:
+                res = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(
                     first=escape_markdown(first_name)
                 )
-                keyboard = InlineKeyboardMarkup(keyb)
+                keyb = []
+
+            backup_message = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(
+                first=escape_markdown(first_name)
+            )
+            keyboard = InlineKeyboardMarkup(keyb)
 
         else:
             welcome_bool = False
