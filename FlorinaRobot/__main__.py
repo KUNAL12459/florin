@@ -85,20 +85,20 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="✅ 𝙰𝙳𝙳 𝙰𝙻𝙴𝚇𝙸𝙰 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ✅", url="t.me/Alexia_robot?startgroup=true"),
+            text="✅ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✅", url="t.me/Alexia_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="📩 𝙰𝙱𝙾𝚄𝚃", callback_data="florina_"),
-        InlineKeyboardButton(text="📝 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", callback_data="help_back"),
-        InlineKeyboardButton(text="💝 𝚂𝙾𝚄𝚁𝙲𝙴", callback_data="source_"),
+        InlineKeyboardButton(text="📩 ᴀʙᴏᴜᴛ", callback_data="florina_"),
+        InlineKeyboardButton(text="📝 ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="💝 sᴏᴜʀᴄᴇ", callback_data="source_"),
     ],
     [
-        InlineKeyboardButton(text="📡 𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/ALEXIA_SUPPORT"),
-        InlineKeyboardButton(text="🎧 𝙼𝚄𝚂𝙸𝙲 𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃", url="https://t.me/Alexiaa_assis"),
-        InlineKeyboardButton(text="𝚂𝙴𝚃𝚄𝙿 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 🎥", url="https://t.me/ALEXIA_UPDATE/10"),
+        InlineKeyboardButton(text="📡 sᴜᴘᴘᴏʀᴛ", url="https://t.me/ALEXIA_SUPPORT"),
+        InlineKeyboardButton(text="🎧 ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ", url="https://t.me/Alexiaa_assis"),
+        InlineKeyboardButton(text="sᴇᴛᴜᴘ ᴛᴜᴛᴏʀɪᴀʟ 🎥", url="https://t.me/ALEXIA_UPDATE/10"),
     ],
     [
-        InlineKeyboardButton(text="𝚃𝚁𝚈 𝙸𝙽𝙻𝙸𝙽𝙴",switch_inline_query_current_chat=""),          
+        InlineKeyboardButton(text="ᴛʀʏ ɪɴʟɪɴᴇ",switch_inline_query_current_chat=""),          
     ],
 ]
 
@@ -223,12 +223,12 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support", url="t.me/ALEXIA_SUPPORT"), 
-                  InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat=""),
+                [[InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/ALEXIA_SUPPORT"), 
+                  InlineKeyboardButton(text="ᴛʀʏ ɪɴʟɪɴᴇ",switch_inline_query_current_chat=""),
                  ],
                  [
-                  InlineKeyboardButton(text="Updates", url="t.me/ALEXIA_UPDATE"), 
-                  InlineKeyboardButton(text="Gban logs",url="t.me/Alexia_logs"),]]               
+                  InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url="t.me/ALEXIA_UPDATE"), 
+                  InlineKeyboardButton(text="ɢʙᴀɴ ʟᴏɢs",url="t.me/Alexia_logs"),]]               
                   
             ),
         )
