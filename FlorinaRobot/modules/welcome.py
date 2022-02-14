@@ -279,10 +279,13 @@ def new_member(update: Update, context: CallbackContext):
                                 InlineKeyboardButton(
                                     text="Updates", url="https://t.me/ALEXIA_UPDATE"
                                 ),
+                                InlineKeyboardButton(
+                                    text="Gban logs", url="https://t.me/Alexia_logs
+                                ),
                             ]
                         ],
                     ),
-                )
+                )         
                 continue
             buttons = sql.get_welc_buttons(chat.id)
             keyb = build_keyboard(buttons)
