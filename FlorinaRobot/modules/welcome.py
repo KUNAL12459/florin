@@ -280,7 +280,7 @@ def new_member(update: Update, context: CallbackContext):
                                     text="Updates", url="https://t.me/ALEXIA_UPDATE"
                                 ),
                                 InlineKeyboardButton(
-                                    text="Gban logs", url="https://t.me/Alexia_logs
+                                    text="Gban logs", url="https://t.me/Alexia_logs"
                                 ),
                             ]
                         ],
