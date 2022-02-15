@@ -1,4 +1,4 @@
-__mod_name__ = "Florina Player"
+__mod_name__ = "Alexiaa Player"
 
 __help__ = """
 =>> *Song Playing* 🎧 
@@ -7,16 +7,16 @@ __help__ = """
 ❍ /current - Show now playing
 ❍ /song <song name> - download songs you want quickly
 ❍ /search <query> - search videos on youtube with details
-❍ /video <song name> - download videos you want quickly
+❍ /play <song name> - download videos you want quickly
 =>> *Admins only*
 ❍ /player - open music player settings panel
 ❍ /pause - pause song play
 ❍ /resume - resume song play
 ❍ /skip - play next song
 ❍ /end - stop music play
-❍ /userbotjoin - invite assistant to your chat
+
 ❍ /admincache - Refresh admin list
 =>>   *Use*
-1) Add @Florina_Robot in your group to admin with all permission
-2) Add Assistant I'd to your group @florina_assis
+1) Add [Alexia](https://t.me/Alexia_robot) in your group to admin with all permission
+2) Add Assistant I'd to your group [click here](https://t.me/Alexiaa_assis)
 """
