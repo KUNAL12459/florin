@@ -103,7 +103,7 @@ buttons = [
 ]
 
 HELP_STRINGS = """
-*HELP BUTTONS HERE*"""
+*Hᴇʟᴘ Bᴜᴛᴛᴏɴs Hᴇʀᴇ*"""
 
 FLORINA_IMG = "https://telegra.ph/file/df8f01ba7c9ef965291e4.jpg"
 
