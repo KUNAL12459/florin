@@ -76,7 +76,5 @@ __New couple of the day may be chosen at 12AM {tomorrow}__"""
 
 
 
-__help__ = """
- ❍ /shipping - To Choose Couple Of The Day
- """
+
 __mod_name__ = "shipping"
