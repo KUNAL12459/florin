@@ -4,16 +4,12 @@ import time
 
 import FlorinaRobot.modules.fun_strings as fun_strings
 from FlorinaRobot import dispatcher
-from FlorinaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from FlorinaRobot.modules.disable import DisableAbleCommandHandler
 from FlorinaRobot.modules.helper_funcs.chat_status import is_user_admin
-from FlorinaRobot.modules.helper_funcs.alternate import typing_action
-from FlorinaRobot.modules.helper_funcs.filters import CustomFilters
 from FlorinaRobot.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
-from telegram.ext import CallbackContext, run_async, CommandHandler, Filters
-
-import FlorinaRobot.modules.helper_funcs.string_store as fun
+from telegram.ext import CallbackContext, run_async
 
 GIF_ID = "CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE"
 
@@ -71,7 +67,7 @@ def slap(update: Update, context: CallbackContext):
     user_id = extract_user(message, args)
 
     if user_id == bot.id:
-        temp = random.choice(fun_strings.SLAP_YONE_TEMPLATES)
+        temp = random.choice(fun_strings.SLAP_MASHA_TEMPLATES)
 
         if isinstance(temp, list):
             if temp[2] == "tmute":
@@ -326,23 +322,7 @@ def weebify(update: Update, context: CallbackContext):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
-        
-        
-@run_async
-@typing_action
-def goodnight(update, context):
-    message = update.effective_message
-    reply = random.choice(fun.GDNIGHT)
-    message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
-
-@run_async
-@typing_action
-def goodmorning(update, context):
-    message = update.effective_message
-    reply = random.choice(fun.GDMORNING)
-    message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
-    
 
 __help__ = """
  ❍ /runs*:* reply a random string from an array of replies
@@ -375,12 +355,6 @@ EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
-GDMORNING_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(gm|good morning)"), goodmorning, friendly="goodmorning"
-)
-GDNIGHT_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(gn|good night)"), goodnight, friendly="goodnight"
-)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
@@ -396,10 +370,8 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(GDMORNING_HANDLER)
-dispatcher.add_handler(GDNIGHT_HANDLER)
 
-__mod_name__ = "Memes"
+__mod_name__ = "MEMES"
 __command_list__ = [
     "runs",
     "slap",
@@ -431,6 +403,4 @@ __handlers__ = [
     SHOUT_HANDLER,
     WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
-    GDMORNING_HANDLER,
-    GDNIGHT_HANDLER,
 ]
