@@ -1,33 +1,37 @@
 import asyncio
 import os
 import re
+
 import better_profanity
 import emoji
 import nude
 import requests
-
+from FlorinaRobot import telethn as tbot
 from better_profanity import profanity
-from gpytranslate import SyncTranslator
+from google_trans_new import google_translator
+from pymongo import MongoClient
 from telethon import events
 from telethon.tl.types import ChatBannedRights
-from pymongo import MongoClient
 
-from FlorinaRobot.utils.pluginhelpers import is_admin
+from FlorinaRobot import BOT_ID
+from FlorinaRobot.conf import get_str_key
 from FlorinaRobot.events import register
-from FlorinaRobot.modules.sql.nsfw_watch_sql import (
+from FlorinaRobot.modules.sql_extended.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from FlorinaRobot import telethn, MONGO_DB_URI, BOT_ID
+from FlorinaRobot.pyro.telethonbasics import is_admin
 
-trans = SyncTranslator()
+translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
+
+MONGO_DB_URI = get_str_key("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["Sophia"]
+db = client["FlorinaRobot"]
 
 async def is_nsfw(event):
     lmao = event
@@ -63,7 +67,7 @@ async def is_nsfw(event):
     return is_nsfw
 
 
-@telethn.on(events.NewMessage(pattern="/gshield (.*)"))
+@tbot.on(events.NewMessage(pattern="/gshield (.*)"))
 async def nsfw_watch(event):
     if not event.is_group:
         await event.reply("You Can Only Nsfw Watch in Groups.")
@@ -80,7 +84,7 @@ async def nsfw_watch(event):
             or input_str == "enable"
         ):
             if is_nsfwatch_indb(str(event.chat_id)):
-                await event.reply("This Chat Has Already Enabled Nsfw Watch.")
+                await event.reply("`This Chat Has Already Enabled Nsfw Watch.`")
                 return
             add_nsfwatch(str(event.chat_id))
             await event.reply(
@@ -104,11 +108,11 @@ async def nsfw_watch(event):
                 "I undestand `/nsfwguardian on` and `/nsfwguardian off` only"
             )
     else:
-        await event.reply("You Should Be Admin To Do This!")
+        await event.reply("`You Should Be Admin To Do This!`")
         return
 
 
-@telethn.on(events.NewMessage())
+@tbot.on(events.NewMessage())
 async def ws(event):
     warner_starkz = get_all_nsfw_enabled_chat()
     if len(warner_starkz) == 0:
@@ -127,11 +131,12 @@ async def ws(event):
         await event.delete()
         st = sender.first_name
         hh = sender.id
-        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By TGN`\n"
+        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Mr.Joker deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})"
         dev = await event.respond(final)
-        await asyncio.sleep(30)
+        await asyncio.sleep(10)
         await dev.delete()
         os.remove("nudes.jpg")
+
 
 
 approved_users = db.approve
@@ -204,7 +209,7 @@ async def profanity(event):
         return
     event.pattern_match.group(1)
     if not await is_admin(event, BOT_ID):
-        await event.reply("I Should Be Admin To Do This!")
+        await event.reply("`I Should Be Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
 
@@ -249,7 +254,7 @@ async def profanity(event):
         return
 
 
-@telethn.on(events.NewMessage(pattern=None))
+@tbot.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
     if event.is_private:
         return
@@ -280,7 +285,7 @@ async def del_profanity(event):
                     await event.delete()
                     st = sender.first_name
                     hh = sender.id
-                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Sophia deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By Sophia` \n "
+                    final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Mr.Joker deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh}) "
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
@@ -291,7 +296,7 @@ def extract_emojis(s):
     return "".join(c for c in s if c in emoji.UNICODE_EMOJI)
 
 
-@telethn.on(events.NewMessage(pattern=None))
+@tbot.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
     if event.is_private:
         return
@@ -330,7 +335,7 @@ async def del_profanity(event):
                 else:
                     rm = msg
                 # print (rm)
-                b = trans.detect(rm)
+                b = translator.detect(rm)
                 if not "en" in b and not b == "":
                     await event.delete()
                     st = sender.first_name
@@ -339,14 +344,15 @@ async def del_profanity(event):
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
+#
 
 __help__ = """
-• FlorinaRobot can protect your group from NSFW senders, Slag word users and also can force members to use English
+*Group Guardian:*
+Alexia can protect your group from NSFW senders, Slang word users and also can force members to use English
 
-*Commmands:*
-  • `/gshield <on/off>`*:* Enable|Disable Porn cleaning
-  • `/globalmode <on/off>`*:* Enable|Disable English only mode
-  • `/profanity <on/off>`*:* Enable|Disable slag word cleaning
+*Commmands*
+ 🔹 `/gshield` on/off - Enable|Disable Porn cleaning
+ 🔹 `/globalmode` on/off - Enable|Disable English only mode
+ 🔹 `/profanity` on/off - Enable|Disable slag word cleaning
 """
-
-__mod_name__ = "Shield"
+__mod_name__ = "Group-Shield"
