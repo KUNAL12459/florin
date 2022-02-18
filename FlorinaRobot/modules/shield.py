@@ -22,7 +22,7 @@ from FlorinaRobot.modules.sql_extended.nsfw_watch_sql import (
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from FlorinaRobot.pyro.telethonbasics import is_admin
+from FlorinaRobot.pyrogramee.telethonbasics import is_admin
 
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
