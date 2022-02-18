@@ -13,7 +13,7 @@ from faker import Faker
 from faker.providers import internet
 from PyDictionary import PyDictionary
 from pyrogram import errors, filters
-from pyrogram.types import (
+from pyrogram.types import (CallbackQuery,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     InlineQueryResultArticle,
