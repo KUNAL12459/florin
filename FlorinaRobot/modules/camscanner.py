@@ -1,5 +1,5 @@
 from FlorinaRobot import telethn as tbot
-from FlorinaRobot import MONGO_DB_URL
+from DaisyX import MONGO_DB_URL
 from FlorinaRobot.events import register
 from telethon import *
 from telethon.tl import functions
@@ -9,7 +9,7 @@ import subprocess
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URL)
-db = client["DaisyX"]
+db = client["FlorinaRobot"]
 approved_users = db.approve
 
 
