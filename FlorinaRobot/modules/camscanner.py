@@ -9,7 +9,7 @@ import subprocess
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URL)
-db = client["FlorinaRobot"]
+db = client["DaisyX"]
 approved_users = db.approve
 
 
