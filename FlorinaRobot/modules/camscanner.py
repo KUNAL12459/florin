@@ -1,5 +1,5 @@
 from FlorinaRobot import telethn as tbot
-from DaisyX import MONGO_DB_URL
+from FlorinaRobot import MONGO_DB_URL
 from FlorinaRobot.events import register
 from telethon import *
 from telethon.tl import functions
