@@ -1,4 +1,5 @@
 future
+PyDictionary==2.0.1
 emoji
 lxml
 wget
