@@ -49,7 +49,7 @@ class AioHttp:
 
 __mod_name__ = "INLINE🎁"
 __help__ = f"""
-INLINE BOT SERVICE OF @SerenaYvonneRobot
+INLINE BOT SERVICE OF @Alexia\_Robot
 I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.
 
 ──「 Syntax 」──
@@ -93,7 +93,7 @@ I'm more efficient when added as group admin. By the way these commands can be u
 
 __MODULE__ = "Inline"
 __HELP__ = f"""
- ==>> **INLINE BOT SERVICE OF @SerenaYvonneRobot** <<==
+ ==>> **INLINE BOT SERVICE OF @Alexia\_Robot** <<==
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
    >> Syntax <<
 @Alexia\_Robot [command] [query]
@@ -575,7 +575,7 @@ async def inline_query_handler(client, query):
                 Time Zones:- {tom}
                 Top Level Domain:- {lanester}
                 wikipedia:- {wiki}</b>
-                Gathered By @SerenaYvonneRobot.</b>
+                Gathered By @Alexia\_Robot.</b>
                 """
             results.append(
                 InlineQueryResultArticle(
