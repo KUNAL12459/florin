@@ -13,7 +13,7 @@ from faker import Faker
 from faker.providers import internet
 from PyDictionary import PyDictionary
 from pyrogram import errors, filters
-from pyrogram.types import (CallbackQuery,
+from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     InlineQueryResultArticle,
@@ -22,11 +22,10 @@ from pyrogram.types import (CallbackQuery,
 )
 from search_engine_parser import GoogleSearch
 from tswift import Song
-from youtubesearchpython import VideosSearch
 
 from FlorinaRobot.utils.inlinehelper import *
 from FlorinaRobot.utils.pluginhelpers import fetch, json_prettify
-from FlorinaRobot import pgram, OPENWEATHERMAP_ID, TIME_API_KEY, SUPPORT_CHAT
+from FlorinaRobot import pbot, OPENWEATHERMAP_ID, TIME_API_KEY, SUPPORT_CHAT
 
 dictionary = PyDictionary()
 
@@ -48,99 +47,99 @@ class AioHttp:
             return await resp.read()
 
 
-__mod_name__ = "Inline"
+__mod_name__ = "INLINE🎁"
 __help__ = f"""
-INLINE BOT SERVICE OF @Alexia_robot
+INLINE BOT SERVICE OF @SerenaYvonneRobot
 I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.
 
 ──「 Syntax 」──
-   @Alexia_Robot [command] [query]
+   @Alexia\_Robot [command] [query]
 
 ──「 Commands Available 」──
-☫ alive - Check Bot's Stats.
-☫ yt [query] - Youtube Search.
-☫ tr [LANGUAGE_CODE] [QUERY]** - Translate Text.
-☫ modapk [name] - Give you direct link of mod apk.
-☫ ud [QUERY] - Urban Dictionary Query
-☫ google [QUERY] - Google Search.
-☫ webss [URL] - Take Screenshot Of A Website.
-☫ bitly [URL] - Shorten A Link.
-☫ wall [Query] - Find Wallpapers.
-☫ pic [Query] - Find pictures.
-☫ saavn [SONG_NAME] - Get Songs From Saavn.
-☫ deezer [SONG_NAME] - Get Songs From Deezer.
-☫ torrent [QUERY] - Torrent Search.
-☫ reddit [QUERY] - Get memes from reddit.
-☫ imdb [QUERY] - Search movies on imdb.
-☫ spaminfo [ID] - Get spam info of the user.
-☫ lyrics [QUERY] - Get lyrics of the song.
-☫ paste [TEXT] - Paste text on pastebin.
-☫ define [WORD] - Get definition from Dictionary.
-☫ synonyms [WORD] - Get synonyms from Dictionary.
-☫ antonyms [WORD] - Get antonyms from Dictionary.
-☫ country [QUERY] - Get Information about given country.
-☫ cs - Gathers Cricket info (Globally).
-☫ covid [COUNTRY] - Get covid updates of given country.
+❦ alive - Check Bot's Stats.
+❦ yt [query] - Youtube Search.
+❦ tr [LANGUAGE_CODE] [QUERY]** - Translate Text.
+❦ modapk [name] - Give you direct link of mod apk.
+❦ ud [QUERY] - Urban Dictionary Query
+❦ google [QUERY] - Google Search.
+❦ webss [URL] - Take Screenshot Of A Website.
+❦ bitly [URL] - Shorten A Link.
+❦ wall [Query] - Find Wallpapers.
+❦ pic [Query] - Find pictures.
+❦ saavn [SONG_NAME] - Get Songs From Saavn.
+❦ deezer [SONG_NAME] - Get Songs From Deezer.
+❦ torrent [QUERY] - Torrent Search.
+❦ reddit [QUERY] - Get memes from reddit.
+❦ imdb [QUERY] - Search movies on imdb.
+❦ spaminfo [ID] - Get spam info of the user.
+❦ lyrics [QUERY] - Get lyrics of the song.
+❦ paste [TEXT] - Paste text on pastebin.
+❦ define [WORD] - Get definition from Dictionary.
+❦ synonyms [WORD] - Get synonyms from Dictionary.
+❦ antonyms [WORD] - Get antonyms from Dictionary.
+❦ country [QUERY] - Get Information about given country.
+❦ cs - Gathers Cricket info (Globally).
+❦ covid [COUNTRY] - Get covid updates of given country.
 ❦ fakegen - Gathers fake information.
-☫ weather [QUERY] - Get weather information.
-☫ datetime [QUERY] - Get Date & time information of given country/region.
-☫ app [QUERY] - Search for apps in playstore.
-☫ gh [QUERY] - Search github.
-☫ so [QUERY] - Search stack overflow.
-☫ wiki [QUERY] - Search wikipedia.
-☫ ping - Check ping rate.
-☫ pokedex [TEXT]: Pokemon Search
+❦ weather [QUERY] - Get weather information.
+❦ datetime [QUERY] - Get Date & time information of given country/region.
+❦ app [QUERY] - Search for apps in playstore.
+❦ gh [QUERY] - Search github.
+❦ so [QUERY] - Search stack overflow.
+❦ wiki [QUERY] - Search wikipedia.
+❦ ping - Check ping rate.
+❦ pokedex [TEXT]: Pokemon Search
 """
 
 __MODULE__ = "Inline"
 __HELP__ = f"""
- ==>> **INLINE BOT SERVICE OF @ZeusXRobot** <<==
+ ==>> **INLINE BOT SERVICE OF @SerenaYvonneRobot** <<==
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
    >> Syntax <<
-@Alexia_robot [command] [query]
+@Alexia\_Robot [command] [query]
    >> Commands Available <<
-☫ **alive** - __Check Bot's Stats.__
-☫ **yt [query]** - __Youtube Search.__
-☫ **tr [LANGUAGE_CODE] [QUERY]** - __Translate Text.__
-☫ **ud [QUERY]** - __Urban Dictionary Query.__
-☫ **google [QUERY]** - __Google Search.__
-☫ **modapk [name]** - __Give you direct link of mod apk__
-☫ **webss [URL]** - __Take Screenshot Of A Website.__
-☫ **bitly [URL]** - __Shorten A Link.__
-☫ **wall [Query]** - __Find Wallpapers.__
-☫ **pic [Query]** - __Find pictures.__
-☫ **saavn [SONG_NAME]** - __Get Songs From Saavn.__
-☫ **deezer [SONG_NAME]** - __Get Songs From Deezer.__
-☫ **torrent [QUERY]** - __Torrent Search.__
-☫ **reddit [QUERY]** - __Get memes from redit.__
-☫ **imdb [QUERY]** - __Search movies on imdb.__
-☫ **spaminfo [id]** - __Get spam info of the user.__
-☫ **lyrics [QUERY]** - __Get lyrics of given song.__
-☫ **paste [TEXT]** - __Paste text on pastebin.__
-☫ **define [WORD]** - __Get definition from Dictionary.__
-☫ **synonyms [WORD]** - __Get synonyms from Dictionary.__
-☫ **antonyms [WORD]** - __Get antonyms from Dictionary.__
-☫ **country [QUERY]** - __Get Information about given country.__
-☫ **cs** - __Gathers Cricket info (Globally).__
-☫ **covid [COUNTRY]** - __Get covid updates of given country.__
-☫ **fakegen** - __Gathers fake information.__
-☫ **weather [QUERY]** - __Get weather information.__
-☫ **datetime [QUERY]** - __Get Date & time information of given country/region.__
-☫ **app [QUERY]** - __Search for apps on playstore.
-☫ **gh [QUERY]** - __Search github.__
-☫ **so [QUERY]** - __Search stack overfolw.__
-☫ **wiki [QUERY]** - __Search wikipedia.__
-☫ **ping** - __Check ping rate.__
-☫ **pokedex [TEXT]** - __Pokemon Search.__
+❦ **alive** - __Check Bot's Stats.__
+❦ **yt [query]** - __Youtube Search.__
+❦ **tr [LANGUAGE_CODE] [QUERY]** - __Translate Text.__
+❦ **ud [QUERY]** - __Urban Dictionary Query.__
+❦ **google [QUERY]** - __Google Search.__
+❦ **modapk [name]** - __Give you direct link of mod apk__
+❦ **webss [URL]** - __Take Screenshot Of A Website.__
+❦ **bitly [URL]** - __Shorten A Link.__
+❦ **wall [Query]** - __Find Wallpapers.__
+❦ **pic [Query]** - __Find pictures.__
+❦ **saavn [SONG_NAME]** - __Get Songs From Saavn.__
+❦ **deezer [SONG_NAME]** - __Get Songs From Deezer.__
+❦ **torrent [QUERY]** - __Torrent Search.__
+❦ **reddit [QUERY]** - __Get memes from redit.__
+❦ **imdb [QUERY]** - __Search movies on imdb.__
+❦ **spaminfo [id]** - __Get spam info of the user.__
+❦ **lyrics [QUERY]** - __Get lyrics of given song.__
+❦ **paste [TEXT]** - __Paste text on pastebin.__
+❦ **define [WORD]** - __Get definition from Dictionary.__
+❦ **synonyms [WORD]** - __Get synonyms from Dictionary.__
+❦ **antonyms [WORD]** - __Get antonyms from Dictionary.__
+❦ **country [QUERY]** - __Get Information about given country.__
+❦ **cs** - __Gathers Cricket info (Globally).__
+❦ **covid [COUNTRY]** - __Get covid updates of given country.__
+❦ **fakegen** - __Gathers fake information.__
+❦ **weather [QUERY]** - __Get weather information.__
+❦ **datetime [QUERY]** - __Get Date & time information of given country/region.__
+❦ **app [QUERY]** - __Search for apps on playstore.
+❦ **gh [QUERY]** - __Search github.__
+❦ **so [QUERY]** - __Search stack overfolw.__
+❦ **wiki [QUERY]** - __Search wikipedia.__
+❦ **ping** - __Check ping rate.__
+❦ **pokedex [TEXT]** - __Pokemon Search.__
 """
 
 
-@pgram.on_message(filters.command("inline"))
+@pbot.on_message(filters.command("inline"))
 async def inline_help(_, message):
-    await pgram.send_message(message.chat.id, text=__HELP__)
+    await pbot.send_message(message.chat.id, text=__HELP__)
 
 
-@pgram.on_inline_query()
+@pbot.on_inline_query()
 async def inline_query_handler(client, query):
     try:
         text = query.query.lower()
@@ -190,48 +189,6 @@ async def inline_query_handler(client, query):
             answerss = await ping_func(answers)
             await client.answer_inline_query(query.id, results=answerss, cache_time=2)
             return
-
-        elif text.split()[0] == "yt":
-            answers = []
-            search_query = text.split(None, 1)[1]
-            search_query = query.query.lower().strip().rstrip()
-
-            if search_query == "":
-                await client.answer_inline_query(
-                    query.id,
-                    results=answers,
-                    switch_pm_text="Type a YouTube video name...",
-                    switch_pm_parameter="help",
-                    cache_time=0,
-                )
-            else:
-                search = VideosSearch(search_query, limit=50)
-
-                for result in search.result()["result"]:
-                    answers.append(
-                        InlineQueryResultArticle(
-                            title=result["title"],
-                            description="{}, {} views.".format(
-                                result["duration"], result["viewCount"]["short"]
-                            ),
-                            input_message_content=InputTextMessageContent(
-                                "https://www.youtube.com/watch?v={}".format(
-                                    result["id"]
-                                )
-                            ),
-                            thumb_url=result["thumbnails"][0]["url"],
-                        )
-                    )
-
-                try:
-                    await query.answer(results=answers, cache_time=0)
-                except errors.QueryIdInvalid:
-                    await query.answer(
-                        results=answers,
-                        cache_time=0,
-                        switch_pm_text="Error: Search timed out",
-                        switch_pm_parameter="",
-                    )
 
         elif text.split()[0] == "wall":
             tex = text.split(None, 1)[1]
@@ -618,7 +575,7 @@ async def inline_query_handler(client, query):
                 Time Zones:- {tom}
                 Top Level Domain:- {lanester}
                 wikipedia:- {wiki}</b>
-                Gathered By @ZeusXRobot.</b>
+                Gathered By @SerenaYvonneRobot.</b>
                 """
             results.append(
                 InlineQueryResultArticle(
