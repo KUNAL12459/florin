@@ -1,4 +1,4 @@
-from RemiRobot import telethn as tbot
+from FlorinaRobot import telethn as tbot
 import json
 import requests
 from FlorinaRobot.events import register
