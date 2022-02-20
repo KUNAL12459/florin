@@ -13,7 +13,7 @@ import random
 import json
 import os
 import re
-from Pikachu.events import register
+from FlorinaRobot.events import register
 
 COLORS = [
     "#F07975", "#F49F69", "#F9C84A", "#8CC56E", "#6CC7DC", "#80C1FA", "#BCB3F9", "#E181AC"]
