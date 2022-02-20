@@ -224,7 +224,6 @@ def start(update: Update, context: CallbackContext):
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/ALEXIA_SUPPORT"), 
-                  InlineKeyboardButton(text="ᴛʀʏ ɪɴʟɪɴᴇ",switch_inline_query_current_chat=""),
                  ],
                  [
                   InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url="t.me/ALEXIA_UPDATE"), 
