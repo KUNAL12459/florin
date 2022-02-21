@@ -370,7 +370,7 @@ def Florina_about_callback(update: Update, context: CallbackContext):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n_Masha's licensed under the GNU General Public License v3.0_
-                 \nHere is the [💾Repository](https://github.com/KUNAL12459/Alexia).
+                 \nHere is the [💾Repository](https://github.com/Sumans11/LoveRobot).
                  \n\nIf you have any question about Alexia, let us know at @Alexiasupport.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -398,7 +398,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..🤗 I'm *ALEXIA*
-                 \nHere is the [Source Code](https://github.com/KUNAL12459/Alexia) .""",
+                 \nHere is the [Source Code](https://github.com/Sumans11/LoveRobot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
