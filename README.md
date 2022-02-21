@@ -18,6 +18,13 @@
 </p>
 </a>
 
+
+
+![Repository Size](https://img.shields.io/github/repo-size/Sumans11/FlorinaRobot?style=for-the-badge&logo=appveyor)</br>
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://gitHub.com/aryazakaria01/)</br>
+
+
 ###
 ** 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔 𝒐𝒗𝒆𝒓 𝒐𝒕𝒉𝒆𝒓 𝒃𝒐𝒕𝒔:**
 - 𝑴𝒐𝒅𝒆𝒓𝒏
