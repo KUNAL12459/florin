@@ -5,6 +5,7 @@ wget
 gtts
 faker
 arq
+redis
 odmantic
 httpx
 pykeyboard
