@@ -6,7 +6,6 @@ gtts
 faker
 arq
 odmantic
-redis
 httpx
 pykeyboard
 beautifulsoup4
